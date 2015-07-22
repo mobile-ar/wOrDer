@@ -12,7 +12,7 @@ import Foundation
 class TestBrain: NSObject {
     
     //get something better here from a words database or something
-    var words = ["test", "car", "dog", "bit", "trip", "rope", "sky", "text", "type", "watch", "apple", "red", "iron", "man"]
+    var words = ["test", "car", "dog", "bit", "trip", "rope", "sky", "text", "type", "watch", "apple", "red", "iron", "man", "master"]
     
     //get a correct word from the "database" :P
     func getWord() -> String {

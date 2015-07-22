@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2838B5531B5ECE00002FECC6 /* MovieInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2838B5521B5ECE00002FECC6 /* MovieInterfaceController.swift */; };
+		2838B5551B5EE227002FECC6 /* startrek.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 286EAA111B5EC2100042BD4B /* startrek.mp4 */; };
+		286EAA0F1B5E96160042BD4B /* UnlockInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281D463C1B59704B005841FB /* UnlockInterfaceController.swift */; };
 		28891C441B5404B90029B721 /* TestBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28891C431B5404B90029B721 /* TestBrain.swift */; };
 		28F7F3DE1B53F1C200B75CCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F7F3DD1B53F1C200B75CCE /* AppDelegate.swift */; };
 		28F7F3E01B53F1C200B75CCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F7F3DF1B53F1C200B75CCE /* ViewController.swift */; };
@@ -84,6 +87,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		281D463C1B59704B005841FB /* UnlockInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnlockInterfaceController.swift; sourceTree = "<group>"; };
+		2838B5521B5ECE00002FECC6 /* MovieInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInterfaceController.swift; sourceTree = "<group>"; };
+		286EAA111B5EC2100042BD4B /* startrek.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = startrek.mp4; sourceTree = "<group>"; };
 		28891C431B5404B90029B721 /* TestBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBrain.swift; sourceTree = "<group>"; };
 		28F7F3DA1B53F1C200B75CCE /* wOrDer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wOrDer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F7F3DD1B53F1C200B75CCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +151,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		286EAA101B5EC1F80042BD4B /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				286EAA111B5EC2100042BD4B /* startrek.mp4 */,
+			);
+			name = Media;
+			sourceTree = "<group>";
+		};
 		28F7F3D11B53F1C200B75CCE = {
 			isa = PBXGroup;
 			children = (
@@ -213,8 +227,11 @@
 		28F7F4151B53F1C300B75CCE /* watchOS_test WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				286EAA101B5EC1F80042BD4B /* Media */,
 				28891C431B5404B90029B721 /* TestBrain.swift */,
 				28F7F4181B53F1C300B75CCE /* InterfaceController.swift */,
+				2838B5521B5ECE00002FECC6 /* MovieInterfaceController.swift */,
+				281D463C1B59704B005841FB /* UnlockInterfaceController.swift */,
 				28F7F41A1B53F1C300B75CCE /* ExtensionDelegate.swift */,
 				28F7F41C1B53F1C300B75CCE /* NotificationController.swift */,
 				28F7F41E1B53F1C300B75CCE /* GlanceController.swift */,
@@ -418,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28F7F4231B53F1C300B75CCE /* Assets.xcassets in Resources */,
+				2838B5551B5EE227002FECC6 /* startrek.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,9 +473,11 @@
 			files = (
 				28F7F41D1B53F1C300B75CCE /* NotificationController.swift in Sources */,
 				28F7F41B1B53F1C300B75CCE /* ExtensionDelegate.swift in Sources */,
+				286EAA0F1B5E96160042BD4B /* UnlockInterfaceController.swift in Sources */,
 				28891C441B5404B90029B721 /* TestBrain.swift in Sources */,
 				28F7F4211B53F1C300B75CCE /* ComplicationController.swift in Sources */,
 				28F7F4191B53F1C300B75CCE /* InterfaceController.swift in Sources */,
+				2838B5531B5ECE00002FECC6 /* MovieInterfaceController.swift in Sources */,
 				28F7F41F1B53F1C300B75CCE /* GlanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,7 +552,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -556,6 +577,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -576,7 +599,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -592,7 +616,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -637,6 +663,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_HEADERS_RUN_UNIFDEF = NO;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = watchOS_test_WatchKit_Extension;
 				INFOPLIST_FILE = "watchOS_test WatchKit App/Info.plist";
@@ -654,6 +681,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_HEADERS_RUN_UNIFDEF = NO;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = watchOS_test_WatchKit_Extension;
 				INFOPLIST_FILE = "watchOS_test WatchKit App/Info.plist";
@@ -702,6 +730,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Solstice.watchOS-testTests";
 				PRODUCT_NAME = wOrDer;
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wOrDer.app/wOrDer";
 			};
 			name = Debug;
@@ -714,6 +743,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Solstice.watchOS-testTests";
 				PRODUCT_NAME = wOrDer;
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wOrDer.app/wOrDer";
 			};
 			name = Release;
@@ -725,6 +755,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Solstice.watchOS-testUITests";
 				PRODUCT_NAME = wOrDer;
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = watchOS_test;
 				USES_XCTRUNNER = YES;
 			};
@@ -737,6 +768,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Solstice.watchOS-testUITests";
 				PRODUCT_NAME = wOrDer;
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = watchOS_test;
 				USES_XCTRUNNER = YES;
 			};

@@ -25,8 +25,7 @@ class InterfaceController: WKInterfaceController {
     var lives = 3
     var dificultyLavel = 0.0 {
         didSet {
-            self.timer.invalidate()
-            self.timer = NSTimer.scheduledTimerWithTimeInterval(3.5 - self.dificultyLavel, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+            self.setTimer()
         }
     }
     
@@ -72,6 +71,7 @@ class InterfaceController: WKInterfaceController {
         else {
             self.displayedWord = brain.mixLettersInWord(self.correctWord)
             self.word.setText(self.displayedWord)
+            self.setTimer()
         }
     }
     
@@ -79,7 +79,7 @@ class InterfaceController: WKInterfaceController {
         NSLog("lives: ", self.lives)
         self.lives--
         switch self.lives {
-        case 3: NSLog("lives: ", self.lives)
+        case 3: NSLog("lives: %i", self.lives)
         case 2: self.heart1.setImage(UIImage(named: "heart"))
         case 1: self.heart2.setImage(UIImage(named: "heart"))
         case 0:
@@ -93,11 +93,17 @@ class InterfaceController: WKInterfaceController {
         self.timer.invalidate()
         self.popController()
     }
+    
+    func setTimer() {
+        self.timer.invalidate()
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(3.5 - self.dificultyLavel, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+    }
+    
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(4.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
     }
 
     override func didDeactivate() {

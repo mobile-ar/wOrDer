@@ -1,0 +1,43 @@
+---
+archs:           [ armv7k ]
+platform:        watchos
+install-name:    /System/Library/Frameworks/ClockKit.framework/ClockKit
+objc-constraint: retain_release
+exports:         
+  - archs:           [ armv7k ]
+    symbols:         [ _CLKBundle, _CLKComplicationClientInterface, _CLKComplicationFamilyFromString, 
+                       _CLKComplicationMachService, _CLKComplicationPrincipalClassKey, 
+                       _CLKComplicationServerActiveComplicationsDidChangeNotification, 
+                       _CLKComplicationServerInterface, _CLKComplicationSupportedFamiliesKey, 
+                       _CLKDropLeftRedundantDesignator, _CLKEqualObjects, 
+                       _CLKFloatEqualsFloat, _CLKIsValidComplicationColumnAlignment, 
+                       _CLKIsValidComplicationDynamicFontSize, _CLKIsValidComplicationRingStyle, 
+                       _CLKLaunchedTimelineEntryDateKey, _CLKLocalizedString, 
+                       _CLKRemoteComplicationReloadDarwinNotification, 
+                       _CLKStringForComplicationFamily, _CLKUsesFauxSmallCaps, 
+                       _ClockKitVersionNumber, _ClockKitVersionString, 
+                       __CLKStandardTimeFormatTemplate ]
+    objc-classes:    [ _CLKClockTimer, _CLKComplication, _CLKComplicationClient, 
+                       _CLKComplicationClientManager, _CLKComplicationServer, 
+                       _CLKComplicationTemplate, _CLKComplicationTemplateCircularSmallRingImage, 
+                       _CLKComplicationTemplateCircularSmallRingText, _CLKComplicationTemplateCircularSmallSimpleImage, 
+                       _CLKComplicationTemplateCircularSmallSimpleText, 
+                       _CLKComplicationTemplateCircularSmallStackImage, 
+                       _CLKComplicationTemplateCircularSmallStackText, 
+                       _CLKComplicationTemplateModularLargeColumns, _CLKComplicationTemplateModularLargeStandardBody, 
+                       _CLKComplicationTemplateModularLargeTable, _CLKComplicationTemplateModularLargeTallBody, 
+                       _CLKComplicationTemplateModularSmallColumnsText, 
+                       _CLKComplicationTemplateModularSmallRingImage, _CLKComplicationTemplateModularSmallRingText, 
+                       _CLKComplicationTemplateModularSmallSimpleImage, 
+                       _CLKComplicationTemplateModularSmallSimpleText, 
+                       _CLKComplicationTemplateModularSmallStackImage, 
+                       _CLKComplicationTemplateModularSmallStackText, _CLKComplicationTemplateUtilitarianLargeFlat, 
+                       _CLKComplicationTemplateUtilitarianSmallFlat, _CLKComplicationTemplateUtilitarianSmallRingImage, 
+                       _CLKComplicationTemplateUtilitarianSmallRingText, 
+                       _CLKComplicationTemplateUtilitarianSmallSquare, 
+                       _CLKComplicationTimelineEntry, _CLKDate, _CLKDateTextProvider, 
+                       _CLKImageProvider, _CLKRelativeDateTextProvider, 
+                       _CLKSimpleTextProvider, _CLKTextProvider, _CLKTextProviderCache, 
+                       _CLKTimeIntervalTextProvider, _CLKTimeOffsetManager, 
+                       _CLKTimeTextProvider, __StringAndWidthCache ]
+...

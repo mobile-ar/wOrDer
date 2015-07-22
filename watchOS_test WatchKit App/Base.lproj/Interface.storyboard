@@ -50,6 +50,77 @@
             </objects>
             <point key="canvasLocation" x="613" y="302.5"/>
         </scene>
+        <!--Movie Interface Controller-->
+        <scene sceneID="IEd-GF-9EF">
+            <objects>
+                <controller hidesWhenLoading="NO" id="9qp-ih-g1L" customClass="MovieInterfaceController" customModule="wOrDer">
+                    <items>
+                        <movie width="1" height="100" alignment="center" verticalAlignment="center" posterImage="moviePoster" id="rur-60-XQD"/>
+                    </items>
+                    <connections>
+                        <outlet property="movie" destination="rur-60-XQD" id="9FM-kW-57P"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="387" y="674"/>
+        </scene>
+        <!--Unlock Interface Controller-->
+        <scene sceneID="o8Y-DS-NM9">
+            <objects>
+                <controller hidesWhenLoading="NO" id="WV0-vA-Rln" customClass="UnlockInterfaceController" customModule="wOrDer">
+                    <items>
+                        <group width="116" alignment="left" id="sEI-7w-V0S">
+                            <items>
+                                <picker width="50" height="50" alignment="left" verticalAlignment="center" focusStyle="stack" indicatorMode="shownWhileFocused" id="XlP-pF-5nF" colorLabel="IBBuiltInLabel-Red">
+                                    <connections>
+                                        <action selector="picker1Action:" destination="WV0-vA-Rln" id="zjL-wW-kQK"/>
+                                    </connections>
+                                </picker>
+                                <label alignment="right" verticalAlignment="center" text="0" id="kDa-Lp-WvA">
+                                    <color key="textColor" red="0.38001277269387246" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="24"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="4Gb-2u-1CN">
+                            <items>
+                                <picker width="50" height="50" alignment="left" verticalAlignment="center" focusStyle="stack" indicatorMode="shownWhileFocused" id="NM8-Po-cqU">
+                                    <connections>
+                                        <action selector="picker2Action:" destination="WV0-vA-Rln" id="2dc-Wb-RU6"/>
+                                    </connections>
+                                </picker>
+                                <button alignment="right" verticalAlignment="center" title="Check!" id="h2v-3m-cI9">
+                                    <connections>
+                                        <action selector="checkCode" destination="WV0-vA-Rln" id="xik-pL-jOx"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="113" alignment="left" id="Xgu-JW-PYl">
+                            <items>
+                                <picker width="50" height="50" alignment="left" verticalAlignment="center" focusStyle="stack" indicatorMode="shownWhileFocused" id="8aK-Wp-nxD">
+                                    <connections>
+                                        <action selector="picker3Action:" destination="WV0-vA-Rln" id="bY7-t6-cbR"/>
+                                    </connections>
+                                </picker>
+                                <label alignment="right" verticalAlignment="center" text="0" id="vjf-rJ-3MT">
+                                    <color key="textColor" red="1" green="0.050213125069722309" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="24"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="fails" destination="vjf-rJ-3MT" id="hap-jU-njK"/>
+                        <outlet property="picker1" destination="XlP-pF-5nF" id="0X5-Sw-Nim"/>
+                        <outlet property="picker2" destination="NM8-Po-cqU" id="dwb-8v-s7L"/>
+                        <outlet property="picker3" destination="8aK-Wp-nxD" id="48V-ke-K8t"/>
+                        <outlet property="success" destination="kDa-Lp-WvA" id="ybp-34-xuA"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="613" y="673.5"/>
+        </scene>
         <!--Interface Controller-->
         <scene sceneID="kWI-hW-ox4">
             <objects>
@@ -62,11 +133,25 @@
                                 </label>
                             </items>
                         </group>
-                        <button alignment="center" verticalAlignment="center" title="New game" id="dGs-Wx-kBD">
+                        <button width="1" alignment="center" verticalAlignment="center" title="New game" id="dGs-Wx-kBD">
                             <color key="titleColor" red="1" green="0.68643208609999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="system" pointSize="24"/>
                             <connections>
                                 <segue destination="AgC-eL-Hgc" kind="push" id="iWo-7I-xxv"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" verticalAlignment="center" title="See trailer" id="gqH-0h-S62">
+                            <color key="titleColor" red="0.0" green="0.77818035510000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="24"/>
+                            <connections>
+                                <segue destination="9qp-ih-g1L" kind="push" id="2h7-DW-0Ud"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" verticalAlignment="center" title="Try Unlock" id="UG6-K1-aYF">
+                            <color key="titleColor" red="1" green="0.94960220740000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="24"/>
+                            <connections>
+                                <segue destination="WV0-vA-Rln" kind="push" id="JFq-SF-eY1"/>
                             </connections>
                         </button>
                     </items>
@@ -85,7 +170,7 @@
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                 </glanceController>
             </objects>
-            <point key="canvasLocation" x="235" y="672"/>
+            <point key="canvasLocation" x="248" y="904"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -101,14 +186,14 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="235" y="1001"/>
+            <point key="canvasLocation" x="248" y="1154"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
                 <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="wOrDer" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="553" y="1001"/>
+            <point key="canvasLocation" x="566" y="1154"/>
         </scene>
     </scenes>
 </document>
